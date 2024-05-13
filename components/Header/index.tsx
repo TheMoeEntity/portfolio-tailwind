@@ -48,10 +48,10 @@ const Header = () => {
                     <i className="fas fa-envelope mr-2"></i>  HIRE ME!
                 </button>
             </div>
-            <button className="text-2xl hover:text-[#0053CC] hover:border-[#0053CC] transition-colors duration-300 mt-12 w-12 h-12 flex justify-center items-center rounded-full border-[0.5px] p-3 text-white" onClick={() => setSideBar(true)}>
+            <button className="text-2xl bg-[#1f1f1f] hover:text-[#0053CC] hover:border-[#0053CC] transition-colors duration-300 mt-12 w-12 h-12 flex justify-center items-center rounded-full border-[0.5px] p-3 text-white" onClick={() => setSideBar(true)}>
                 <i className="fa-solid fa-bars"></i>
             </button>
-            <div className="fixed bg-[#1F1F1F] z-[50] top-1/2 gap-y-5 px-4 py-5 -translate-y-1/2 right-3 md:right-16 rounded-full border-gray-400 border-[1px] flex flex-col items-center justify-center">
+            <div className="fixed shadow-xl bg-[#1F1F1F] z-[50] top-1/2 gap-y-5 px-4 py-5 -translate-y-1/2 right-3 md:right-16 rounded-full border-gray-400 border-[1px] flex flex-col items-center justify-center">
                 <div className="flex justify-center items-center text-gray-400">
                     <a href="/#intro"><i className="fas fa-house"></i></a>
                 </div>
@@ -75,7 +75,7 @@ const Header = () => {
                 </div>
             </div>
             <div onClick={() => setSideBar(false)} className={`w-full h-full fixed top-0 transition-opacity duration-500 left-0 bg-[#3A3A3A] ${sidebar ? 'opacity-50 z-10' : 'opacity-0 -z-10'}`}></div>
-            <div className={`fixed text-sm top-0 z-[55] right-0 w-[60%] md:w-[30%] bg-[#191919] h-full py-10 gap-y-16 px-10 duration-500 transition-transform flex flex-col justify-center items-center ${sidebar ? 'translate-x-0' : 'translate-x-[100%]'}`}>
+            <div className={`fixed text-sm top-0 z-[55] right-0 w-[80%] md:w-[30%] bg-[#191919] h-full py-10 gap-y-16 px-10 duration-500 transition-transform flex flex-col justify-center items-center ${sidebar ? 'translate-x-0' : 'translate-x-[100%]'}`}>
                 <span className="text-white"><b>MENU</b></span>
                 <div className="flex justify-center items-center text-gray-400">
                     <button><i className="fas fa-house mr-2"></i> Home</button>
