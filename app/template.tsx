@@ -8,6 +8,7 @@ import NotFound from "../app/not-found";
 import { SnackbarProvider } from "notistack";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
+import Loader from "@/components/Loader";
 
 const Template = ({ children }: { children: ReactNode }) => {
   const { scrollBtn, scrollTop, pathname } = useScrollTop();
@@ -19,6 +20,7 @@ const Template = ({ children }: { children: ReactNode }) => {
         classes={{ containerRoot: "z-alert" }}
         anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
       >
+        <Loader />
         {<Header />}
         <motion.div
           initial={{ y: 150, opacity: 0 }}
@@ -27,20 +29,6 @@ const Template = ({ children }: { children: ReactNode }) => {
         >
           {children}
         </motion.div>
-        {/* {<Footer />} */}
-        {/* <SidePanel /> */}
-        {/* <div ref={whatsappLink} className="whatsapp-link">
-          <a
-            target={`_blank`}
-            rel="noopener noreferrer"
-            href="https://wa.me/+2348075489362"
-          >
-            <i className="fa-brands fa-whatsapp"></i>
-          </a>
-        </div> */}
-        <div ref={scrollBtn} onClick={scrollTop} className="scrollTop">
-          <i className="fa-solid fa-angle-up"></i>
-        </div>
       </SnackbarProvider>
     );
   } else {
