@@ -9,7 +9,12 @@ export default function Loader() {
         }, 750)
     }, []);
 
-    if (!show) return null;
+    if (!show){
+        setTimeout(() => {
+            return null;
+        }, 1500);
+    } 
+        
 
     return (
         <div className="bg-[#282C34] fixed top-0 left-0 w-full h-full opacity-[0.98] flex items-center justify-center z-[200]">
