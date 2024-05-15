@@ -11,7 +11,7 @@ const About = () => {
                     <span>ABOUT</span>
                 </span>
                 <span>
-                    <h1 className='text-[45px] font-semibold text-white'>
+                    <h1 className='text-[36px] md:text-[45px] font-semibold text-white'>
                         Every great project begins with a <span className='text-[#0053cc]'>clear vision</span>
                     </h1>
                 </span>

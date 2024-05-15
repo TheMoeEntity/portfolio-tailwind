@@ -8,7 +8,7 @@ const Skills = () => {
                 <span>MY SKILLS</span>
             </span>
             <span>
-                <h1 className='text-[45px] font-semibold text-white'>
+                <h1 className='text-[36px] md:text-[45px] font-semibold text-white'>
                     My <span className='text-[#0053cc]'>Advantages</span>
                 </h1>
             </span>

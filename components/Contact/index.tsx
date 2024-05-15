@@ -8,7 +8,7 @@ const Contact = () => {
                 <span>CONTACT</span>
             </span>
             <span>
-                <h1 className='text-[45px] font-semibold text-white'>
+                <h1 className='text-[36px] md:text-[45px] font-semibold text-white'>
                     Let&#39;s Work <span className='text-[#0053cc]'>Together</span>
                 </h1>
             </span>

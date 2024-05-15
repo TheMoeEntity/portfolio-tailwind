@@ -8,7 +8,7 @@ const Experience = () => {
                 <span>RESUME</span>
             </span>
             <span>
-                <h1 className='text-[45px] font-semibold text-white'>
+                <h1 className='text-[36px] md:text-[45px] font-semibold text-white'>
                     My <span className='text-[#0053cc]'>Experience</span>
                 </h1>
             </span>

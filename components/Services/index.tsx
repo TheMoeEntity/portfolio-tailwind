@@ -8,7 +8,7 @@ const Services = () => {
                 <span>SERVICES</span>
             </span>
             <span>
-                <h1 className='text-[45px] font-semibold text-white'>
+                <h1 className='text-[36px] md:text-[45px] font-semibold text-white'>
                     My <span className='text-[#0053cc]'>Specializations</span>
                 </h1>
             </span>
@@ -16,7 +16,7 @@ const Services = () => {
             <div className='flex flex-col gap-y-4'>
                 <div className="w-full p-10 rounded-2xl border-[#565656] border-[1px]">
                     <div className="flex justify-between items-center">
-                        <span className='text-white text-2xl'>WEBSITE DESIGN & DEVELOPMENT</span>
+                        <span className='text-white text-2xl'>WEB DESIGN & DEVELOPMENT</span>
                         <span className='fas fa-code text-2xl'></span>
                     </div>
                     <p className='text-sm w-[80%] py-5'>
@@ -32,7 +32,7 @@ const Services = () => {
                         <span className='fas fa-mobile-phone text-2xl'></span>
                     </div>
                     <p className='text-sm w-[80%] py-5'>
-                        I engineer mobile applications with cutting-edge features using React Native & Swift.
+                        I engineer mobile applications that run on iOS with cutting-edge features using React Native & Swift.
                     </p>
                 </div>
             </div>
