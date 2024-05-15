@@ -17,10 +17,10 @@ const About = () => {
                 </span>
                 <span>
                     <p className='w-full md:w-[80%] mb-8 leading-10 text-sm'>
-                        Since starting my journey as a freelance web developer nearly 8 years ago, I've engaged in remote collaborations with agencies, consulted for startups, and teamed up with talented individuals to craft digital solutions for various business needs. I thrive on challenges, am driven by curiosity, and am constantly honing my skills to tackle each coding problem with precision and creativity.
+                        Since starting my journey as a freelance web developer nearly 8 years ago, I&#39;ve engaged in remote collaborations with agencies, consulted for startups, and teamed up with talented individuals to craft digital solutions for various business needs. I thrive on challenges, driven by curiosity, and constantly honing my skills to tackle each coding problem with precision and creativity.
                     </p>
                     <p className='w-full md:w-[80%] mb-8 leading-10 text-sm'>
-                        I believe great websites and apps are like art—blending functionality and beauty to leave users spellbound. So, wield your virtual sword and join me in pushing boundaries and creating digital wonders. Welcome to my portfolio, where possibilities are limitless. Let's make magic together! ✨
+                        I believe great websites and apps are like art—blending functionality and beauty to leave users spellbound. So, wield your virtual sword and join me in pushing boundaries and creating digital wonders. Welcome to my portfolio, where possibilities are limitless. Let&#39;s make magic together! ✨
                     </p>
                 </span>
             </div>

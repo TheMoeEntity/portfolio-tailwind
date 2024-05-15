@@ -51,7 +51,7 @@ const Intro = () => {
             </span>
             <span>
                 <h1 className='text-[55px] font-semibold text-white'>
-                    Hello! I'm <span className='text-[#0053cc]'>MOE</span>, A Software Developer.
+                    Hello! I&#39;m <span className='text-[#0053cc]'>MOE</span>, A Software Developer.
                 </h1>
             </span>
             <span>
@@ -59,11 +59,6 @@ const Intro = () => {
                     I design and code beautifully simple things and i love what i do. <br />
                 </p>
             </span>
-            {/* <div className="spinning-circle-container">
-                <div className="spinning-circle">
-                    <div className="project-text"></div>
-                </div>
-            </div> */}
 
             <div className='mt-40 flex gap-x-16'>
                 <div className='flex flex-col gap-y-4'>
