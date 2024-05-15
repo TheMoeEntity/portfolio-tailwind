@@ -6,15 +6,10 @@ export default function Loader() {
     useEffect(() => {
         setTimeout(() => {
             setShow(false);
-        }, 750)
+        }, 1500)
     }, []);
 
-    if (!show){
-        setTimeout(() => {
-            return null;
-        }, 1500);
-    } 
-        
+    if (!show) return null;
 
     return (
         <div className="bg-[#282C34] fixed top-0 left-0 w-full h-full opacity-[0.98] flex items-center justify-center z-[200]">
