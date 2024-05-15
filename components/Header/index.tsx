@@ -30,7 +30,7 @@ const Header = () => {
     }, [prevScrollPos]);
     return (
         <div className='flex absolute flex-row justify-end items-center py-5 md:px-20 px-2 w-full'>
-            <div className="fixed text-white top-3 left-5 rounded-[40px] border-[1px] border-[#565656] w-[28%] h-[98%] px-8 py-8 flex-col gap-9 items-center hidden lg:flex">
+            <div className="fixed text-white top-3 left-5 rounded-[40px] border-[1px] border-[#565656] w-[28%] h-[98%] px-8 py-8 flex-col gap-9 items-center hidden xl:flex">
                 <div className="flex justify-between items-center w-full">
                     <h1 className="font-semibold text-3xl text-white">MOE</h1>
                     <div className="flex flex-col gap-1 text-sm text-right">
@@ -69,9 +69,6 @@ const Header = () => {
                 <i className="fa-solid fa-bars"></i>
             </button>
             <div className={"fixed shadow-xl bg-[#1F1F1F] z-[50] top-1/2 gap-y-5 px-4 py-5 right-3 md:right-16 rounded-full border-[#575757] border-[1px] flex flex-col items-center justify-center duration-500 transition-all " + (visible ? 'opacity-100 -translate-y-1/2 ' : 'opacity-0 -translate-y-[100px]')}>
-                <div className="flex justify-center items-center text-[#999999]">
-                    <a href="/#intro"><i className="fas fa-house"></i></a>
-                </div>
                 <div className="flex justify-center items-center text-[#999999]">
                     <a href="/#about"><i className="fas fa-user"></i></a>
                 </div>

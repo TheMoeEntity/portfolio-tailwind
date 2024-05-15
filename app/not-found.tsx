@@ -11,12 +11,10 @@ export default function NotFound() {
       <div id="notfound">
         <div className="notfound">
           <div className="notfound-404">
-            <h1>Oops!</h1>
+            <h1 className="text-white" style={{ color: 'white !important' }}>Oops!</h1>
             {
-              isBlogPost ? (
-                <h2>I {`don't `} think {`that's `} a valid blog post</h2>
-              ) : (
-                <h2>404 - The Page {`can't`} be found</h2>
+              (
+                <h2 className="w-fit shadow-xl px-2">404 - The Page {`can't`} be found</h2>
               )
             }
 

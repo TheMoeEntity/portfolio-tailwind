@@ -2,8 +2,19 @@
 import React, { CSSProperties } from 'react'
 import roundText from '../../public/images/round-text.png'
 import Image from 'next/image'
-
+import { motion } from 'framer-motion'
+import TypeEffect from './Type'
 const Intro = () => {
+    const defaultAnimation = {
+        hidden: {
+            opacity: 0,
+            y: 80
+        },
+        visible: {
+            opacity: 1,
+            y: 0
+        }
+    }
     const imageStyles: CSSProperties = {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -12,7 +23,7 @@ const Intro = () => {
     }
     return (
         <div id='intro' className=' px-5 py-10 flex flex-col gap-y-10'>
-            <div className=" text-white top-3 left-5 rounded-[40px] border-[1px] border-[#565656] h-fit px-8 py-8 flex-col gap-9 items-center flex lg:hidden">
+            <div className=" text-white top-3 left-5 rounded-[40px] border-[1px] border-[#565656] h-fit px-8 py-8 flex-col gap-9 items-center flex xl:hidden">
                 <div className="flex justify-between items-center w-full">
                     <h1 className="font-semibold text-3xl text-white">MOE</h1>
                     <div className="flex flex-col gap-1 text-sm text-right">
@@ -53,7 +64,7 @@ const Intro = () => {
             </span>
             <span>
                 <h1 className='text-[36px] md:text-[55px] font-semibold text-white'>
-                    Hello! I&#39;m <span className='text-[#0053cc]'>MOE</span>, A Software Developer.
+                    <TypeEffect />
                 </h1>
             </span>
             <span>
