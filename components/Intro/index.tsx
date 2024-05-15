@@ -1,5 +1,7 @@
 'use client'
 import React, { CSSProperties } from 'react'
+import roundText from '../../public/images/round-text.png'
+import Image from 'next/image'
 
 const Intro = () => {
     const imageStyles: CSSProperties = {
@@ -45,7 +47,7 @@ const Intro = () => {
                     <i className="fas fa-envelope mr-2"></i>  HIRE ME!
                 </button>
             </div>
-            <span className='px-5 text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]'>
+            <span className='px-5 items-center text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]'>
                 <i className='fas fa-house'></i>
                 <span>INTRODUCTION</span>
             </span>
@@ -59,8 +61,22 @@ const Intro = () => {
                     I design and code beautifully simple things and i love what i do. <br />
                 </p>
             </span>
+            <div className="flex md:justify-end w-full">
+                <div className='w-[45%] relative md:w-[15%] lg:w-[20%] h-auto p-3 lg:p-3 border-[1px] border-[#575757] rounded-full md:mr-20'>
+                    <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10">
+                        <i className='fas fa-angle-down text-white text-3xl'></i>
+                    </div>
+                    <Image
+                        src={roundText}
+                        alt="Spinning text"
+                        quality={100}
+                        sizes={'100vw'}
+                        className="object-cover w-full h-auto spin"
+                    />
+                </div>
+            </div>
 
-            <div className='mt-40 flex gap-x-16'>
+            <div className='mt-12 flex gap-x-16'>
                 <div className='flex flex-col gap-y-4'>
                     <span className='text-[60px] text-[#0053cc]'>
                         7+

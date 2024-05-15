@@ -1,8 +1,10 @@
 'use client'
+import { useScrollTop } from "@/Helpers/hooks";
 import Link from "next/link";
-import { CSSProperties, useState } from 'react'
+import { CSSProperties, useEffect, useState } from 'react'
 
 const Header = () => {
+    const { scrollTop } = useScrollTop();
     const [open, setAnim] = useState<boolean>(false);
     const imageStyles: CSSProperties = {
         backgroundSize: 'cover',
@@ -11,6 +13,21 @@ const Header = () => {
         backgroundImage: `url('/images/profile.jpg')`,
     }
     const [sidebar, setSideBar] = useState<boolean>(false)
+    const [prevScrollPos, setPrevScrollPos] = useState<number>(0);
+    const [visible, setVisible] = useState<boolean>(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+            const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
+            setPrevScrollPos(currentScrollPos);
+            setVisible(isVisible);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [prevScrollPos]);
     return (
         <div className='flex absolute flex-row justify-end items-center py-5 md:px-20 px-2 w-full'>
             <div className="fixed text-white top-3 left-5 rounded-[40px] border-[1px] border-[#565656] w-[28%] h-[98%] px-8 py-8 flex-col gap-9 items-center hidden md:flex">
@@ -32,16 +49,16 @@ const Header = () => {
                 </div>
                 <div className="flex justify-center gap-x-5">
                     <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400">
-                        <a href=""><i className="fa-brands fa-twitter"></i></a>
+                        <a href="https://x.com/NMoses_" target="_blank"><i className="fa-brands fa-twitter"></i></a>
                     </div>
                     <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400">
-                        <a href=""><i className="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com/in/nwigberi-moses" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
                     </div>
                     <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400">
-                        <a href=""><i className="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://wa.me/+2348075489362" target="_blank"><i className="fa-brands fa-whatsapp"></i></a>
                     </div>
                     <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400">
-                        <a href=""><i className="fa-brands fa-github"></i></a>
+                        <a href="https://github.com/TheMoeEntity" target="_blank"><i className="fa-brands fa-github"></i></a>
                     </div>
                 </div>
                 <button onClick={() => alert('clicked me')} className="w-full rounded-full px-4 py-3 bg-[#0053CC] text-white">
@@ -51,7 +68,7 @@ const Header = () => {
             <button className="text-2xl bg-[#1f1f1f] hover:text-[#0053CC] hover:border-[#0053CC] transition-colors duration-300 mt-12 w-12 h-12 flex justify-center items-center rounded-full border-[0.5px] p-3 text-white" onClick={() => setSideBar(true)}>
                 <i className="fa-solid fa-bars"></i>
             </button>
-            <div className="fixed shadow-xl bg-[#1F1F1F] z-[50] top-1/2 gap-y-5 px-4 py-5 -translate-y-1/2 right-3 md:right-16 rounded-full border-gray-400 border-[1px] flex flex-col items-center justify-center">
+            <div className={"fixed shadow-xl bg-[#1F1F1F] z-[50] top-1/2 gap-y-5 px-4 py-5 right-3 md:right-16 rounded-full border-gray-400 border-[1px] flex flex-col items-center justify-center duration-500 transition-all " + (visible ? 'opacity-100 -translate-y-1/2 ' : 'opacity-0 -translate-y-[100px]')}>
                 <div className="flex justify-center items-center text-gray-400">
                     <a href="/#intro"><i className="fas fa-house"></i></a>
                 </div>
@@ -70,9 +87,9 @@ const Header = () => {
                 <div className="flex justify-center items-center text-gray-400">
                     <a href="/#contact"><i className="fas fa-envelope"></i></a>
                 </div>
-                <div className="flex justify-center items-center text-gray-400">
-                    <a href="/#intro"><i className="fas fa-angle-up"></i></a>
-                </div>
+                <button onClick={()=> scrollTop()} className="flex justify-center items-center text-gray-400">
+                    <i className="fas fa-angle-up"></i>
+                </button>
             </div>
             <div onClick={() => setSideBar(false)} className={`w-full h-full fixed top-0 transition-opacity duration-500 left-0 bg-[#3A3A3A] ${sidebar ? 'opacity-50 z-10' : 'opacity-0 -z-10'}`}></div>
             <div className={`fixed text-sm top-0 z-[55] right-0 w-[80%] md:w-[30%] bg-[#191919] h-full py-10 gap-y-16 px-10 duration-500 transition-transform flex flex-col justify-center items-center ${sidebar ? 'translate-x-0' : 'translate-x-[100%]'}`}>

@@ -449,6 +449,12 @@ a {
     font-size: 14px;
   }
 }
+
+.spin {
+  -webkit-animation: spinner 5s linear infinite;
+  animation: spinner 5s linear infinite;
+}
+
 /* styles/globals.css */
 .loader {
   border-top-color: #1F1F1F;
