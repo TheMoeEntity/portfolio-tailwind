@@ -74,9 +74,9 @@ const Intro = () => {
             </span>
             <div className="flex md:justify-end w-full">
                 <div className='w-[45%] relative md:w-[15%] lg:w-[20%] h-auto p-3 lg:p-3 border-[1px] border-[#575757] rounded-full md:mr-20'>
-                    <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10">
+                    <a href='/#portfolio' className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10">
                         <i className='fas fa-angle-down text-white text-3xl'></i>
-                    </div>
+                    </a>
                     <Image
                         src={roundText}
                         alt="Spinning text"
