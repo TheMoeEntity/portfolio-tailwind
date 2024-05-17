@@ -55,7 +55,7 @@ const Intro = () => {
             </span>
             <span>
                 <h1 className='text-[36px] md:text-[55px] font-semibold text-white'>
-                    Hello! I'm <span className='text-[#0053cc]'>MOE</span>, a Software Developer.
+                    Hello! I&#39;m <span className='text-[#0053cc]'>MOE</span>, a Software Developer.
                     {/* <TypeEffect /> */}
                 </h1>
             </span>
