@@ -162,3 +162,44 @@ export const useValidRoute = (pathname: string): boolean => {
   };
   return checkValid(pathname);
 };
+export const useScrollReveal = () => {
+  const debounce = (func: Function, delay: number) => {
+    let timeoutId: NodeJS.Timeout;
+    return function (...args: any[]) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        func.apply(null, args);
+      }, delay);
+    };
+  }
+  const elementsRef = useRef<HTMLDivElement[]>([]);
+
+  useEffect(() => {
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          debounce(() => {
+            entry.target.classList.add('animateIn'); // Add your animation class here
+          }, 200)()
+        }
+        else {
+          debounce(() => {
+            entry.target.classList.remove('animateIn');
+          }, 200)() // Remove animation class if element is not intersecting
+        }
+      });
+    }, { rootMargin: '80px' });
+
+    elementsRef.current.forEach((element) => {
+      observer.observe(element);
+    });
+
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  return { elementsRef }
+}

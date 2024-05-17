@@ -1,19 +1,24 @@
+'use client'
+import { useScrollReveal } from '@/Helpers/hooks'
 import React from 'react'
 
 const Services = () => {
+    const { elementsRef } = useScrollReveal()
     return (
-        <div id='services' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
-            <span className='px-5 text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]'>
-                <i className='fas fa-cogs'></i>
-                <span>SERVICES</span>
-            </span>
-            <span>
+        <div id='services' className=' px-5 py-10 mt-10 flex flex-col gap-y-10 tranlateUp' ref={(el) => { if (el) elementsRef.current.push(el); }}>
+            <div ref={(el) => { if (el) elementsRef.current.push(el); }} className='translateUp mt-10'>
+                <span className='px-5 text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]'>
+                    <i className='fas fa-cogs'></i>
+                    <span>SERVICES</span>
+                </span>
+            </div>
+            <div ref={(el) => { if (el) elementsRef.current.push(el); }} className='translateUp'>
                 <h1 className='text-[36px] md:text-[45px] font-semibold text-white'>
                     My <span className='text-[#0053cc]'>Specializations</span>
                 </h1>
-            </span>
+            </div>
 
-            <div className='flex flex-col gap-y-4'>
+            <div className='flex flex-col gap-y-4 translateUp' ref={(el) => { if (el) elementsRef.current.push(el); }}>
                 <div className="w-full p-10 rounded-2xl border-[#565656] border-[1px]">
                     <div className="flex justify-between items-center">
                         <span className='text-white text-2xl'>WEB DESIGN & DEVELOPMENT</span>
@@ -25,7 +30,7 @@ const Services = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col gap-y-4'>
+            <div className='flex flex-col gap-y-4 translateUp' ref={(el) => { if (el) elementsRef.current.push(el); }}>
                 <div className="w-full p-10 rounded-2xl border-[#565656] border-[1px]">
                     <div className="flex justify-between items-center">
                         <span className='text-white text-2xl'>MOBILE DEVELOPMENT</span>

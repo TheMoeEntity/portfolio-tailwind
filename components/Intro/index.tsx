@@ -2,25 +2,16 @@
 import React, { CSSProperties } from 'react'
 import roundText from '../../public/images/round-text.png'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
-import TypeEffect from './Type'
+import { useScrollReveal } from '@/Helpers/hooks'
+
 const Intro = () => {
-    const defaultAnimation = {
-        hidden: {
-            opacity: 0,
-            y: 80
-        },
-        visible: {
-            opacity: 1,
-            y: 0
-        }
-    }
     const imageStyles: CSSProperties = {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center right',
         backgroundImage: `url('/images/profile.jpg')`,
     }
+    const { elementsRef } = useScrollReveal()
     return (
         <div id='intro' className=' px-5 py-10 flex flex-col gap-y-10'>
             <div className=" text-white top-3 left-5 rounded-[40px] border-[1px] border-[#565656] h-fit px-8 py-8 flex-col gap-9 items-center flex xl:hidden">
@@ -64,7 +55,8 @@ const Intro = () => {
             </span>
             <span>
                 <h1 className='text-[36px] md:text-[55px] font-semibold text-white'>
-                    <TypeEffect />
+                    Hello! I'm <span className='text-[#0053cc]'>MOE</span>, a Software Developer.
+                    {/* <TypeEffect /> */}
                 </h1>
             </span>
             <span>
@@ -87,14 +79,14 @@ const Intro = () => {
                 </div>
             </div>
 
-            <div className='mt-12 flex gap-x-16'>
-                <div className='flex flex-col gap-y-4'>
+            <div className='mt-20 flex gap-x-16'>
+                <div className='flex flex-col gap-y-4 translateLeft' ref={(el) => { if (el) elementsRef.current.push(el); }}>
                     <span className='text-[60px] text-[#0053cc]'>
                         7+
                     </span>
                     <span>Years in the game.</span>
                 </div>
-                <div className='flex flex-col gap-y-4'>
+                <div className='flex flex-col gap-y-4 translateRight' ref={(el) => { if (el) elementsRef.current.push(el); }}>
                     <span className='text-[60px] text-[#0053cc]'>
                         10+
                     </span>
