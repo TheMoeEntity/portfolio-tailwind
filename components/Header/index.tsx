@@ -41,7 +41,7 @@ const Header = () => {
                 <div className="w-[65%] rounded-2xl h-[190px] mx-auto" style={{ ...imageStyles }}>
                 </div>
                 <div className="flex flex-col gap-y-3">
-                    <span className="text-xl text-center font-semibold">mosesnwigberi@gmail.com</span>
+                    <span className="text-xl text-center font-semibold">moses.nwigberi@ditcosoft.com</span>
                     <span className="text-xl text-center font-semibold">Based in Lagos, Nigeria</span>
                 </div>
                 <div className="text-gray-400 text-center text-sm">

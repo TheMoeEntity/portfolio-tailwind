@@ -12,7 +12,7 @@ const Contact = () => {
                     Let&#39;s Work <span className='text-[#0053cc]'>Together</span>
                 </h1>
             </span>
-            <span className='text-2xl text-white'>mosesnwigberi@gmail.com</span>
+            <span className='text-2xl text-white'>moses.nwigberi@ditcosoft.com</span>
             <div>
                 <form action="" className='w-full flex flex-col gap-7 pb-10'>
                     <div className='flex flex-col gap-8 md:flex-row justify-between'>
