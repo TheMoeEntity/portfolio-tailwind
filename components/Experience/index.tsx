@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react'
 
 const Experience = () => {
 
-    const { elementsRef } = useScrollReveal()
+    const { elementsRef } = useScrollReveal(true)
     return (
         <div id='experience' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
             <div ref={(el) => { if (el) elementsRef.current.push(el); }} className='translateUp'>

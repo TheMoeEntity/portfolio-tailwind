@@ -11,7 +11,7 @@ const Intro = () => {
         backgroundPosition: 'center right',
         backgroundImage: `url('/images/profile.jpg')`,
     }
-    const { elementsRef } = useScrollReveal()
+    const { elementsRef } = useScrollReveal(true)
     return (
         <div id='intro' className=' px-5 py-10 flex flex-col gap-y-10'>
             <div className=" text-white top-3 left-5 rounded-[40px] border-[1px] border-[#565656] h-fit px-8 py-8 flex-col gap-9 items-center flex xl:hidden">
@@ -80,13 +80,13 @@ const Intro = () => {
             </div>
 
             <div className='mt-20 flex gap-x-16'>
-                <div className='flex flex-col gap-y-4 translateLeft' ref={(el) => { if (el) elementsRef.current.push(el); }}>
+                <div className='flex flex-col gap-y-4 translateUp' ref={(el) => { if (el) elementsRef.current.push(el); }}>
                     <span className='text-[60px] text-[#0053cc]'>
                         7+
                     </span>
                     <span>Years in the game.</span>
                 </div>
-                <div className='flex flex-col gap-y-4 translateRight' ref={(el) => { if (el) elementsRef.current.push(el); }}>
+                <div className='flex flex-col gap-y-4 translateDown' ref={(el) => { if (el) elementsRef.current.push(el); }}>
                     <span className='text-[60px] text-[#0053cc]'>
                         10+
                     </span>

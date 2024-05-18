@@ -3,7 +3,7 @@ import { useScrollReveal } from '@/Helpers/hooks'
 
 
 const Skills = () => {
-    const { elementsRef } = useScrollReveal()
+    const { elementsRef } = useScrollReveal(false)
     return (
         <div id='skills' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
             <span className='px-5 text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]'>

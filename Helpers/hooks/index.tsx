@@ -162,7 +162,7 @@ export const useValidRoute = (pathname: string): boolean => {
   };
   return checkValid(pathname);
 };
-export const useScrollReveal = () => {
+export const useScrollReveal = (shouldRepeat:boolean) => {
   const debounce = (func: Function, delay: number) => {
     let timeoutId: NodeJS.Timeout;
     return function (...args: any[]) {
@@ -184,9 +184,10 @@ export const useScrollReveal = () => {
           }, 200)()
         }
         else {
-          debounce(() => {
+          shouldRepeat && (debounce(() => {
             entry.target.classList.remove('animateIn');
-          }, 200)() // Remove animation class if element is not intersecting
+          }, 200)())
+         // Remove animation class if element is not intersecting
         }
       });
     }, { rootMargin: '80px' });

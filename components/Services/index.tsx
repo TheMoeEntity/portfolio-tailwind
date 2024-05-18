@@ -3,7 +3,7 @@ import { useScrollReveal } from '@/Helpers/hooks'
 import React from 'react'
 
 const Services = () => {
-    const { elementsRef } = useScrollReveal()
+    const { elementsRef } = useScrollReveal(true)
     return (
         <div id='services' className=' px-5 py-10 mt-10 flex flex-col gap-y-10 tranlateUp' ref={(el) => { if (el) elementsRef.current.push(el); }}>
             <div ref={(el) => { if (el) elementsRef.current.push(el); }} className='translateUp mt-10'>
