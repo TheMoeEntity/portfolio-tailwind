@@ -14,7 +14,7 @@ export default function NotFound() {
             <h1 className="text-white" style={{ color: 'white !important' }}>Oops!</h1>
             {
               (
-                <h2 className="w-fit shadow-xl px-2">404 - The Page {`can't`} be found</h2>
+                <h2 className="w-fit shadow-xl px-5">404 - The Page {`can't`} be found</h2>
               )
             }
 

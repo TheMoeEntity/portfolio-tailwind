@@ -306,7 +306,7 @@ a {
   font-size: 236px;
   font-weight: 200;
   margin: 0px;
-  color: rgba(0, 0, 0, 0.41);
+  color: white;
   text-transform: uppercase;
   position: absolute;
   left: 50%;
@@ -329,6 +329,7 @@ a {
   position: absolute;
   bottom: 0px;
   left: 0;
+  padding: 20px;
   right: 0;
 }
 
