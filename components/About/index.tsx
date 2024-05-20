@@ -3,6 +3,7 @@ import Parallax from '@/Helpers/hooks/parallax'
 import React from 'react'
 import { useScroll, motion } from 'framer-motion'
 import { useRef } from 'react'
+import { useSetIntersections } from '@/Helpers/hooks'
 
 const About = () => {
     const paragraph = useRef<HTMLParagraphElement>(null)
@@ -11,13 +12,16 @@ const About = () => {
         offset: ['start 0.9', 'start 0.25']
     })
     const aboutRef = useRef<HTMLDivElement>(null)
+    const { introRef } = useSetIntersections('about')
     return (
         <Parallax offset={80}>
             <div ref={aboutRef} id='about' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
-                <span className='px-5 items-center text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]'>
-                    <i className='fas fa-user'></i>
-                    <span>ABOUT ME</span>
-                </span>
+                <div ref={introRef}>
+                    <span className='px-5 items-center text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]'>
+                        <i className='fas fa-user'></i>
+                        <span>ABOUT ME</span>
+                    </span>
+                </div>
                 <span>
                     <h1 className='text-[36px] md:text-[45px] font-semibold text-white'>
                         Every great project begins with a <span className='text-[#0053cc]'>clear vision</span>

@@ -1,13 +1,16 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import zstinger from '../../public/images/zstinger.png'
 import dove from '../../public/images/dovehospital.png'
 import nosrati from '../../public/images/nosrati.png'
 import farzad from '../../public/images/farzad2.png'
+import { useSetIntersections } from '@/Helpers/hooks'
 
 const Projects = () => {
+    const { introRef } = useSetIntersections('portfolio')
     return (
-        <div id='portfolio' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
+        <div ref={introRef} id='portfolio' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
             <span className='px-5 items-center text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]'>
                 <i className='fas fa-brief-case'></i>
                 <span>PORTFOLIO</span>

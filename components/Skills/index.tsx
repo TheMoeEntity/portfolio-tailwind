@@ -1,11 +1,12 @@
 'use client'
-import { useScrollReveal } from '@/Helpers/hooks'
+import { useScrollReveal, useSetIntersections } from '@/Helpers/hooks'
 
 
 const Skills = () => {
     const { elementsRef } = useScrollReveal(false)
+    const { introRef } = useSetIntersections('skills')
     return (
-        <div id='skills' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
+        <div ref={introRef} id='skills' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
             <span className='px-5 text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]'>
                 <i className='fas fa-tools'></i>
                 <span>MY SKILLS</span>

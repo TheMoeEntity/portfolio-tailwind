@@ -1,8 +1,8 @@
 'use client'
-import React, { CSSProperties } from 'react'
+import React, { CSSProperties, useContext, useEffect } from 'react'
 import roundText from '../../public/images/round-text.png'
 import Image from 'next/image'
-import { useScrollReveal } from '@/Helpers/hooks'
+import useIntersection, { useScrollReveal, useSetIntersections } from '@/Helpers/hooks'
 
 const Intro = () => {
     const imageStyles: CSSProperties = {
@@ -11,9 +11,10 @@ const Intro = () => {
         backgroundPosition: 'center right',
         backgroundImage: `url('/images/profile.jpg')`,
     }
-    const { elementsRef } = useScrollReveal(true)
+    const { elementsRef } = useScrollReveal(false)
+    const { introRef } = useSetIntersections('home')
     return (
-        <div id='intro' className=' px-5 py-10 flex flex-col gap-y-10'>
+        <div ref={introRef} id='intro' className=' px-5 py-10 flex flex-col gap-y-10'>
             <div className=" text-white top-3 left-5 rounded-[40px] border-[1px] border-[#565656] h-fit px-8 py-8 flex-col gap-9 items-center flex xl:hidden">
                 <div className="flex justify-between items-center w-full">
                     <h1 className="font-semibold text-3xl text-white">MOE</h1>

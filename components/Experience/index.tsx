@@ -1,12 +1,13 @@
 'use client'
-import { useScrollReveal } from '@/Helpers/hooks'
+import { useScrollReveal, useSetIntersections } from '@/Helpers/hooks'
 import React, { useEffect, useRef } from 'react'
 
 const Experience = () => {
 
     const { elementsRef } = useScrollReveal(true)
+    const { introRef } = useSetIntersections('experience')
     return (
-        <div id='experience' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
+        <div ref={introRef} id='experience' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
             <div ref={(el) => { if (el) elementsRef.current.push(el); }} className='translateUp'>
                 <span className='px-5 items-center text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]'>
                     <i className='fas fa-file-alt'></i>

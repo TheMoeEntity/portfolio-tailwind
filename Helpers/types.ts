@@ -99,7 +99,7 @@ export type replacements = {
 };
 
 
-export type SectionType = 'home' | 'about' | 'services' | 'experience' | 'portfolio' | 'contact';
+export type SectionType = 'home' | 'about' | 'services' | 'experience' | 'portfolio' | 'contact' | 'skills';
 
 export type ActiveSection = {
   section: SectionType;

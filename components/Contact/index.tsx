@@ -4,8 +4,10 @@ import emailjs from 'emailjs-com'
 import Spinner from '../Spinner'
 import toast from 'react-hot-toast';
 import { Helpers } from '@/Helpers';
+import { useSetIntersections } from '@/Helpers/hooks';
 
 const Contact = () => {
+    const { introRef } = useSetIntersections('contact')
     const [subject, setSubject] = useState('--Choose--')
     const [loading, setLoading] = useState(false)
     const submitForm = async (e: FormEvent<HTMLFormElement>) => {
@@ -55,7 +57,7 @@ const Contact = () => {
         })
     }
     return (
-        <div id='contact' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
+        <div ref={introRef} id='contact' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
             {
                 loading && (<Spinner />)
             }

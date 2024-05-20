@@ -1,7 +1,8 @@
 'use client'
+import { SectionContext } from "@/Helpers/context";
 import { useScrollTop } from "@/Helpers/hooks";
 import Link from "next/link";
-import { CSSProperties, useEffect, useState } from 'react'
+import { CSSProperties, useContext, useEffect, useState } from 'react'
 
 const Header = () => {
     const { scrollTop } = useScrollTop();
@@ -15,6 +16,7 @@ const Header = () => {
     const [sidebar, setSideBar] = useState<boolean>(false)
     const [prevScrollPos, setPrevScrollPos] = useState<number>(0);
     const [visible, setVisible] = useState<boolean>(true);
+    const { section } = useContext(SectionContext)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -69,19 +71,25 @@ const Header = () => {
                 <i className="fa-solid fa-bars"></i>
             </button>
             <div className={"fixed shadow-xl bg-[#1F1F1F] z-[50] top-1/2 gap-y-5 px-4 py-5 right-3 md:right-16 rounded-full border-[#575757] border-[1px] flex flex-col items-center justify-center duration-500 transition-all " + (visible ? 'opacity-100 -translate-y-1/2 ' : 'opacity-0 -translate-y-[100px]')}>
-                <div className="flex justify-center items-center text-[#999999]">
+                <div className={`flex duration-300 transition-colors justify-center items-center  ${section === 'home' ? 'text-[#0053cc]' : 'text-[#999999]'}`}>
+                    <a href="/#intro"><i className="fas fa-house"></i></a>
+                </div>
+                <div className={`flex duration-300 transition-colors justify-center items-center  ${section === 'about' ? 'text-[#0053cc]' : 'text-[#999999]'}`}>
                     <a href="/#about"><i className="fas fa-user"></i></a>
                 </div>
-                <div className="flex justify-center items-center text-[#999999]">
+                <div className={`flex duration-300 transition-colors justify-center items-center  ${section === 'experience' ? 'text-[#0053cc]' : 'text-[#999999]'}`}>
                     <a href="/#experience"><i className="fas fa-file-alt"></i></a>
                 </div>
-                <div className="flex justify-center items-center text-[#999999]">
-                    <a href="/#portfolio"><i className="fas fa-briefcase"></i></a>
-                </div>
-                <div className="flex justify-center items-center text-[#999999]">
+                <div className={`flex duration-300 transition-colors justify-center items-center  ${section === 'services' ? 'text-[#0053cc]' : 'text-[#999999]'}`}>
                     <a href="#services"><i className="fas fa-cogs"></i></a>
                 </div>
-                <div className="flex justify-center items-center text-[#999999]">
+                <div className={`flex duration-300 transition-colors justify-center items-center  ${section === 'skills' ? 'text-[#0053cc]' : 'text-[#999999]'}`}>
+                    <a href="/#skills"><i className="fas fa-code"></i></a>
+                </div>
+                <div className={`flex duration-300 transition-colors justify-center items-center  ${section === 'portfolio' ? 'text-[#0053cc]' : 'text-[#999999]'}`}>
+                    <a href="/#portfolio"><i className="fas fa-briefcase"></i></a>
+                </div>
+                <div className={`flex duration-300 transition-colors justify-center items-center  ${section === 'contact' ? 'text-[#0053cc]' : 'text-[#999999]'}`}>
                     <a href="/#contact"><i className="fas fa-envelope"></i></a>
                 </div>
                 <button onClick={() => scrollTop()} className="flex justify-center items-center text-gray-400">

@@ -1,7 +1,8 @@
 import { notFound, usePathname, useRouter } from "next/navigation";
-import { ChangeEvent, useEffect, useRef, useState } from "react";
+import React, { ChangeEvent, useContext, useEffect, useRef, useState } from "react";
 import { Helpers } from "..";
-import { linkType } from "../types";
+import { linkType, SectionType } from "../types";
+import { SectionContext } from "../context";
 
 export const useResize = () => {
   const [val, setVal] = useState("");
@@ -192,7 +193,7 @@ export const useIntersection = (elementRef: React.RefObject<HTMLElement>, rootMa
 
 export default useIntersection;
 
-export const useScrollReveal = (shouldRepeat:boolean) => {
+export const useScrollReveal = (shouldRepeat: boolean) => {
   const debounce = (func: Function, delay: number) => {
     let timeoutId: NodeJS.Timeout;
     return function (...args: any[]) {
@@ -217,7 +218,7 @@ export const useScrollReveal = (shouldRepeat:boolean) => {
           shouldRepeat && (debounce(() => {
             entry.target.classList.remove('animateIn');
           }, 200)())
-         // Remove animation class if element is not intersecting
+          // Remove animation class if element is not intersecting
         }
       });
     }, { rootMargin: '80px' });
@@ -233,4 +234,16 @@ export const useScrollReveal = (shouldRepeat:boolean) => {
   }, []);
 
   return { elementsRef }
+}
+
+export const useSetIntersections = (section: SectionType) => {
+  const introRef = React.useRef<HTMLDivElement>(null);
+  const isVisible = useIntersection(introRef)
+  const { setSection } = useContext(SectionContext);
+  useEffect(() => {
+    if (isVisible) {
+      setSection(section)
+    }
+  }, [isVisible])
+  return { introRef }
 }

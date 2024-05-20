@@ -9,10 +9,11 @@ import { SnackbarProvider } from "notistack";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Loader from "@/components/Loader";
+import { SectionProvider } from "@/Helpers/context";
 
 const Template = ({ children }: { children: ReactNode }) => {
   const { pathname } = useScrollTop();
-  const isHome = pathname == '/' 
+  const isHome = pathname == '/'
 
   if (useValidRoute(pathname)) {
     return (
@@ -20,23 +21,26 @@ const Template = ({ children }: { children: ReactNode }) => {
         classes={{ containerRoot: "z-alert" }}
         anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
       >
-        <Toaster
-          toastOptions={{
-            style: {
-              zIndex: '99999999',
-              background: 'white'
-            }
-          }}
-        />
-        <Loader />
-        {isHome && <Header />}
-        <motion.div
-          initial={{ y: 150, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ ease: "circInOut", duration: 1 }}
-        >
-          {children}
-        </motion.div>
+        <SectionProvider>
+
+          <Toaster
+            toastOptions={{
+              style: {
+                zIndex: '99999999',
+                background: 'white'
+              }
+            }}
+          />
+          <Loader />
+          {isHome && <Header />}
+          <motion.div
+            initial={{ y: 150, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ ease: "circInOut", duration: 1 }}
+          >
+            {children}
+          </motion.div>
+        </SectionProvider>
       </SnackbarProvider>
     );
   } else {
