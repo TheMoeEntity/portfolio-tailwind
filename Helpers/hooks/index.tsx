@@ -165,7 +165,7 @@ export const useValidRoute = (pathname: string): boolean => {
 };
 
 
-export const useIntersection = (elementRef: React.RefObject<HTMLElement>, rootMargin = '0px') => {
+export const useIntersection = (elementRef: React.RefObject<HTMLElement>, rootMargin = '80px') => {
   const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
