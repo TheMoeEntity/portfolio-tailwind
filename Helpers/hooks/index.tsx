@@ -162,6 +162,36 @@ export const useValidRoute = (pathname: string): boolean => {
   };
   return checkValid(pathname);
 };
+
+
+export const useIntersection = (elementRef: React.RefObject<HTMLElement>, rootMargin = '0px') => {
+  const [isIntersecting, setIntersecting] = useState(false);
+
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIntersecting(entry.isIntersecting);
+      },
+      {
+        rootMargin,
+      }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.unobserve(element);
+    };
+  }, [elementRef, rootMargin]);
+
+  return isIntersecting;
+};
+
+export default useIntersection;
+
 export const useScrollReveal = (shouldRepeat:boolean) => {
   const debounce = (func: Function, delay: number) => {
     let timeoutId: NodeJS.Timeout;

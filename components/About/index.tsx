@@ -10,9 +10,10 @@ const About = () => {
         target: paragraph,
         offset: ['start 0.9', 'start 0.25']
     })
+    const aboutRef = useRef<HTMLDivElement>(null)
     return (
         <Parallax offset={80}>
-            <div id='about' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
+            <div ref={aboutRef} id='about' className=' px-5 py-10 mt-10 flex flex-col gap-y-10'>
                 <span className='px-5 items-center text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]'>
                     <i className='fas fa-user'></i>
                     <span>ABOUT ME</span>

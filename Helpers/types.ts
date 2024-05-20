@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 export type nomSingle = {
   name: string;
   image: StaticImageData | null;
@@ -96,3 +97,20 @@ export type replacements = {
   greeting: string;
   sent: string
 };
+
+
+export type SectionType = 'home' | 'about' | 'services' | 'experience' | 'portfolio' | 'contact';
+
+export type ActiveSection = {
+  section: SectionType;
+};
+
+export type SectionContextType = {
+  section: SectionType;
+  setSection: Dispatch<SetStateAction<SectionType>>;
+};
+
+export type ActiveSectionProviderType = {
+  children: ReactNode;
+};
+
