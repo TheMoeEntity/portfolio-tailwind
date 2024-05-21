@@ -5,6 +5,11 @@ import Link from "next/link";
 import { CSSProperties, useContext, useEffect, useState } from 'react'
 
 const Header = () => {
+    const { section,setSection } = useContext(SectionContext)
+    const scrollAction = ()=> {
+        setSection('home')
+        scrollTop()
+    }
     const { scrollTop } = useScrollTop();
     const [open, setAnim] = useState<boolean>(false);
     const imageStyles: CSSProperties = {
@@ -16,7 +21,6 @@ const Header = () => {
     const [sidebar, setSideBar] = useState<boolean>(false)
     const [prevScrollPos, setPrevScrollPos] = useState<number>(0);
     const [visible, setVisible] = useState<boolean>(true);
-    const { section } = useContext(SectionContext)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -50,29 +54,29 @@ const Header = () => {
                     © {new Date().getFullYear()} MOE. All rights reserved.
                 </div>
                 <div className="flex justify-center gap-x-5">
-                    <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400">
+                    <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400 transition-all duration-700 hover:border-[#0053cc] hover:scale-110 hover:text-[#0053cc]">
                         <a href="https://x.com/NMoses_" target="_blank"><i className="fa-brands fa-twitter"></i></a>
                     </div>
-                    <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400">
+                    <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400 transition-all duration-700 hover:border-[#0053cc] hover:scale-110 hover:text-[#0053cc]">
                         <a href="https://linkedin.com/in/nwigberi-moses" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
                     </div>
-                    <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400">
+                    <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400 transition-all duration-700 hover:border-[#0053cc] hover:scale-110 hover:text-[#0053cc]">
                         <a href="https://wa.me/+2348075489362" target="_blank"><i className="fa-brands fa-whatsapp"></i></a>
                     </div>
-                    <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400">
+                    <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400 transition-all duration-700 hover:border-[#0053cc] hover:scale-110 hover:text-[#0053cc]">
                         <a href="https://github.com/TheMoeEntity" target="_blank"><i className="fa-brands fa-github"></i></a>
                     </div>
                 </div>
-                <button className="w-full md:max-w-[600px] rounded-full px-4 py-3 bg-[#0053CC] text-white">
-                    <a href="mailto:mosesnwigberi@gmail.com"><i className="fas fa-envelope mr-2"></i>  HIRE ME!</a>
-                </button>
+                <a href="mailto:moses.nwigberi@ditcosoft.com" className="w-full md:max-w-[600px] text-center rounded-full px-4 py-3 bg-[#0053CC] text-white">
+                    <i className="fas fa-envelope mr-2"></i>  HIRE ME
+                </a>
             </div>
             <button className="right-[13px] lg:-right-[15px] z-50 text-2xl bg-[#1f1f1f] hover:text-[#0053CC] hover:border-[#0053CC] transition-colors duration-300 mt-12 w-12 h-12 fixed md:fixed lg:relative flex justify-center items-center rounded-full border-[1px] border-[#4E4E4E] p-3 text-white" onClick={() => setSideBar(true)}>
                 <i className="fa-solid fa-bars"></i>
             </button>
             <div className={"fixed shadow-xl bg-[#1F1F1F] z-[50] top-1/2 gap-y-5 px-4 py-5 right-3 md:right-16 rounded-full border-[#575757] border-[1px] flex flex-col items-center justify-center duration-500 transition-all " + (visible ? 'opacity-100 -translate-y-1/2 ' : 'opacity-0 -translate-y-[100px]')}>
                 <div className={`flex duration-300 transition-colors justify-center items-center  ${section === 'home' ? 'text-[#0053cc]' : 'text-[#999999]'}`}>
-                    <a href="/#intro"><i className="fas fa-house"></i></a>
+                    <a href="/"><i className="fas fa-house"></i></a>
                 </div>
                 <div className={`flex duration-300 transition-colors justify-center items-center  ${section === 'about' ? 'text-[#0053cc]' : 'text-[#999999]'}`}>
                     <a href="/#about"><i className="fas fa-user"></i></a>
@@ -92,7 +96,7 @@ const Header = () => {
                 <div className={`flex duration-300 transition-colors justify-center items-center  ${section === 'contact' ? 'text-[#0053cc]' : 'text-[#999999]'}`}>
                     <a href="/#contact"><i className="fas fa-envelope"></i></a>
                 </div>
-                <button onClick={() => scrollTop()} className="flex justify-center items-center text-gray-400">
+                <button onClick={() => scrollAction()} className="flex justify-center items-center text-gray-400">
                     <i className="fas fa-angle-up"></i>
                 </button>
             </div>

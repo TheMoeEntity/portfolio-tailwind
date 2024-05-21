@@ -150,9 +150,9 @@ header ul li {
 .whatsapp-link {
   background-color: #25d366;
   position: fixed;
-  bottom: 90px;
+  bottom: 40px;
   opacity: 1;
-  right: 10px;
+  right: 17px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,6 +165,13 @@ header ul li {
   height: 40px;
   border-radius: 50%;
   animation: pulse 1s infinite;
+}
+
+@media screen and (min-width:768px) {
+  .whatsapp-link {
+    right: 69px;
+    bottom: 60px;
+  }
 }
 
 .whatsapp-link a {

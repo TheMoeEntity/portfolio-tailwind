@@ -14,6 +14,7 @@ import { SectionProvider } from "@/Helpers/context";
 const Template = ({ children }: { children: ReactNode }) => {
   const { pathname } = useScrollTop();
   const isHome = pathname == '/'
+  const { whatsappLink } = useWhatsappLink()
 
   if (useValidRoute(pathname)) {
     return (
@@ -40,6 +41,15 @@ const Template = ({ children }: { children: ReactNode }) => {
           >
             {children}
           </motion.div>
+          <div ref={whatsappLink} className="whatsapp-link">
+            <a
+              target={`_blank`}
+              rel="noopener noreferrer"
+              href="https://wa.me/+2348075489362"
+            >
+              <i className="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
         </SectionProvider>
       </SnackbarProvider>
     );
