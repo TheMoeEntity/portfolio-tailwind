@@ -177,7 +177,7 @@ export const useIntersection = (elementRef: React.RefObject<HTMLElement>, rootMa
         setIntersecting(entry.isIntersecting);
       },
       {
-        'threshold':0.5,
+        rootMargin,
       }
     );
 

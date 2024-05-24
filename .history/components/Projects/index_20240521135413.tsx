@@ -47,6 +47,7 @@ const Projects = () => {
                     </div>
                     <div className='flex justify-between'>
                         <h2 className='text-2xl text-white hover:underline underline-offset-4'>ZStinger Inspections- Patent pending</h2>
+                        <h2 className='text-xl text-[#0053cc]'>Production</h2>
                     </div>
                 </div>
                 <div className='flex flex-col gap-y-7'>
