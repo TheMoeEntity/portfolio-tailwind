@@ -515,9 +515,7 @@ a {
     /* Firefox */
   }
 }
-.trans {
-  transition: 0.7s;
-}
+
 .translateUp {
   opacity: 0;
   transform: translateY(120px);

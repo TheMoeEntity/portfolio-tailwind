@@ -67,7 +67,7 @@ const Experience = () => {
                         <div></div>
                     </div>
                     <div ref={(el) => { if (el) elementsRef.current.push(el); }} className='translateUp'>
-                        <div className='text-xl'>2023-present</div>
+                        <div className='text-xl'>2023-2024</div>
                         <div className='flex flex-col gap-y-4 mt-5'>
                             <h2 className='font-semiboold text-2xl md:text-3xl text-white'>Lead Frontend Developer</h2>
                             <h3>PEPNOPS INC.</h3>

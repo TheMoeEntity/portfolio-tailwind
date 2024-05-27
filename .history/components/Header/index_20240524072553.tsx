@@ -104,7 +104,7 @@ const Header = () => {
             <div className={`fixed text-sm top-0 z-[55] right-0 w-[80%] md:w-[60%] lg:w-[30%] bg-[#191919] h-full py-10 gap-y-16 px-10 duration-500 transition-transform flex flex-col justify-center items-center ${sidebar ? 'translate-x-0' : 'translate-x-[100%]'}`}>
                 <span className="text-white"><b>MENU</b></span>
                 <div className="flex justify-center items-center text-gray-400">
-                    <button><i className="fas fa-house w-2 h-2 mr-4"></i>&nbsp; Home</button>
+                    <button><i className="fas fa-house w-2 h-2 mr-4"></i> &nbsp; Home</button>
                 </div>
                 <div className="flex justify-center items-center text-gray-400">
                     <button><i className="fas fa-user w-2 h-2 mr-4"></i>&nbsp; About</button>
@@ -116,10 +116,10 @@ const Header = () => {
                     <button><i className="fas fa-briefcase w-2 h-2 mr-4"></i>&nbsp; Portfolio</button>
                 </div>
                 <div className="flex justify-center items-center text-gray-400">
-                    <button><i className="fas fa-cogs w-2 h-2 mr-4"></i>&nbsp; Services</button>
+                    <button><i className="fas fa-cogs w-2 h-2 mr-4"></i>Services</button>
                 </div>
                 <div className="flex justify-center items-center text-gray-400">
-                    <button><i className="fas fa-envelope w-2 h-2 mr-4"></i>&nbsp; Contact</button>
+                    <button><i className="fas fa-envelope w-2 h-2 mr-4"></i>Contact</button>
                 </div>
             </div>
         </div>
