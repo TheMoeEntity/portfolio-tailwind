@@ -5,6 +5,7 @@ import zstinger from '../../public/images/zstinger.png'
 import dove from '../../public/images/dovehospital.png'
 import nosrati from '../../public/images/nosrati.png'
 import farzad from '../../public/images/farzad2.png'
+import pepnops from '../../public/images/PEPNOPS1.png'
 import { useSetIntersections } from '@/Helpers/hooks'
 
 const Projects = () => {
@@ -21,6 +22,19 @@ const Projects = () => {
                 </h1>
             </span>
             <div className="mt-5 flex flex-col gap-20 md:px-3">
+                <div className='flex flex-col gap-y-7'>
+                    <div className="w-full relative">
+                        <div className="absolute top-0 left-0 w-full h-full bg-[#1f1f1f8f] z-10"></div>
+                        <Image
+                            src={pepnops}
+                            alt="Project Image for PEPNOPS inc"
+                            quality={100}
+                            sizes={'100vw'}
+                            className="object-cover w-full h-auto rounded-xl xl:rounded-3xl"
+                        />
+                    </div>
+                    <h2 className='text-2xl text-white hover:underline underline-offset-4'>PEPNOPS Inc </h2>
+                </div>
                 <div className='flex flex-col gap-y-7'>
                     <div className="w-full relative">
                         <div className="absolute top-0 left-0 w-full h-full bg-[#1f1f1f8f] z-10"></div>
