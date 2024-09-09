@@ -169,13 +169,35 @@ const Header = () => {
           <b>MENU</b>
         </span>
         <div className="flex justify-center items-center text-gray-400">
-          <button>
-            <i className="fas fa-house w-2 h-2 mr-4"></i>&nbsp; Home
+          <button className="flex items-center gap-5">
+            <span>
+              <i className="fas fa-house w-2 h-2"></i>
+            </span>
+            <span>Home</span>
           </button>
         </div>
         <div className="flex justify-center items-center text-gray-400">
-          <button>
-            <i className="fas fa-user w-2 h-2 mr-4"></i>&nbsp; About
+          <button className="flex items-center gap-5">
+            <span>
+              <i className="fas fa-user w-2 h-2"></i>
+            </span>
+            <span>About</span>
+          </button>
+        </div>
+        <div className="flex justify-center items-center text-gray-400">
+          <button className="flex items-center gap-5">
+            <span>
+              <i className="fas fa-file w-2 h-2"></i>
+            </span>
+            <span>Resume</span>
+          </button>
+        </div>
+        <div className="flex justify-center items-center text-gray-400">
+          <button className="flex items-center gap-5">
+            <span>
+              <i className="fas fa-briefcase w-2 h-2"></i>
+            </span>
+            <span>Portfolio</span>
           </button>
         </div>
         <div className="flex justify-center items-center text-gray-400">
