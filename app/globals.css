@@ -328,8 +328,8 @@ a {
   font-size: 28px;
   font-weight: 400;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.41);
-  background: #fff;
+  background: white;
+  color: #0053cc;
   padding: 10px 5px;
   margin: auto;
   display: inline-block;
