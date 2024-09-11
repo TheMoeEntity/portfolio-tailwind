@@ -49,7 +49,7 @@ const Projects = () => {
             Greencal Foundation
           </a>
         </div>
-        <div className="flex flex-col gap-y-7">
+        {/* <div className="flex flex-col gap-y-7">
           <div className="w-full relative">
             <div className="absolute top-0 left-0 w-full h-full bg-[#1f1f1f8f] z-10"></div>
             <Image
@@ -67,7 +67,7 @@ const Projects = () => {
           >
             Multi-tenant Recharge Card Printing Portal (SaaS)
           </a>
-        </div>
+        </div> */}
         <div className="flex flex-col gap-y-7">
           <div className="w-full relative">
             <div className="absolute top-0 left-0 w-full h-full bg-[#1f1f1f8f] z-10"></div>
