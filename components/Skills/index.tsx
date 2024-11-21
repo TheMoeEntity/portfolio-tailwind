@@ -121,7 +121,7 @@ const Skills = () => {
           <span className="text-sm">REACT</span>
         </div>
         <div
-          className="w-[155px] md:w-40  gap-y-7 flex flex-col items-center justify-center p-10 h-60 border-[#565656] border-[1px] rounded-full translateRight"
+          className="w-[155px] md:w-40  gap-y-7 flex flex-col items-center justify-center p-10 h-60 border-[#565656] border-[1px] rounded-full translateUp"
           ref={(el) => {
             if (el) elementsRef.current.push(el);
           }}
