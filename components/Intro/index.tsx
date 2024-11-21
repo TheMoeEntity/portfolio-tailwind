@@ -6,6 +6,7 @@ import useIntersection, {
   useScrollReveal,
   useSetIntersections,
 } from "@/Helpers/hooks";
+import Icon from "../Icons";
 
 const Intro = () => {
   const imageStyles: CSSProperties = {
@@ -48,22 +49,30 @@ const Intro = () => {
         <div className="flex justify-center gap-x-5">
           <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400">
             <a href="">
-              <i className="fa-brands fa-twitter"></i>
+              <span className="flex items-center justify-center">
+                <Icon name="bxl-twitter" />
+              </span>
             </a>
           </div>
           <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400">
             <a href="">
-              <i className="fa-brands fa-instagram"></i>
+              <span className="flex items-center justify-center">
+                <Icon name="bxl-instagram" />
+              </span>
             </a>
           </div>
           <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400">
             <a href="">
-              <i className="fa-brands fa-whatsapp"></i>
+              <span className="flex items-center justify-center">
+                <Icon name="bxl-whatsapp" />
+              </span>
             </a>
           </div>
           <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400">
             <a href="">
-              <i className="fa-brands fa-github"></i>
+              <span className="flex items-center justify-center">
+                <Icon name="bxl-github" />
+              </span>
             </a>
           </div>
         </div>
@@ -77,9 +86,11 @@ const Intro = () => {
           </button>
         </div>
       </div>
-      <span className="px-5 items-center text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]">
-        <i className="fas fa-house"></i>
-        <span>INTRODUCTION</span>
+      <span className="px-5 items-center text-sm w-fit flex gap-2 py-2 border-[1px] rounded-full text-white border-[#9999]">
+        <span className="flex items-center justify-center">
+          <Icon name="bx-home" size="17px" />
+        </span>
+        <span className="flex items-center justify-center">INTRODUCTION</span>
       </span>
       <span>
         <h1 className="text-[36px] md:text-[55px] font-semibold text-white">
@@ -100,7 +111,9 @@ const Intro = () => {
             href="/#portfolio"
             className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10"
           >
-            <i className="fas fa-angle-down text-white text-3xl"></i>
+            <span className="flex items-center justify-center">
+              <Icon name="bx-chevron-down" size="70px" />
+            </span>
           </a>
           <Image
             src={roundText}

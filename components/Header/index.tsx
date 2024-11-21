@@ -3,6 +3,7 @@ import { SectionContext } from "@/Helpers/context";
 import { useScrollTop } from "@/Helpers/hooks";
 import Link from "next/link";
 import { CSSProperties, useContext, useEffect, useState } from "react";
+import Icon from "../Icons";
 
 const Header = () => {
   const { section, setSection } = useContext(SectionContext);
@@ -63,37 +64,51 @@ const Header = () => {
         <div className="flex justify-center gap-x-5">
           <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400 transition-all duration-700 hover:border-[#0053cc] hover:scale-110 hover:text-[#0053cc]">
             <a href="https://x.com/NMoses_" target="_blank">
-              <i className="fa-brands fa-twitter"></i>
+              {/* <i className="fa-brands fa-twitter"></i> */}
+              <span className="flex items-center justify-center">
+                <Icon name="bxl-twitter" />
+              </span>
             </a>
           </div>
           <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400 transition-all duration-700 hover:border-[#0053cc] hover:scale-110 hover:text-[#0053cc]">
             <a href="https://linkedin.com/in/nwigberi-moses" target="_blank">
-              <i className="fa-brands fa-linkedin"></i>
+              <span className="flex items-center justify-center">
+                <Icon name="bxl-linkedin" />
+              </span>
             </a>
           </div>
           <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400 transition-all duration-700 hover:border-[#0053cc] hover:scale-110 hover:text-[#0053cc]">
             <a href="https://wa.me/+2348075489362" target="_blank">
-              <i className="fa-brands fa-whatsapp"></i>
+              <span className="flex items-center justify-center">
+                <Icon name="bxl-whatsapp" />
+              </span>
             </a>
           </div>
           <div className="w-10 h-10 rounded-full border-gray-400 border-[1px] flex justify-center items-center text-gray-400 transition-all duration-700 hover:border-[#0053cc] hover:scale-110 hover:text-[#0053cc]">
             <a href="https://github.com/TheMoeEntity" target="_blank">
-              <i className="fa-brands fa-github"></i>
+              <span className="flex items-center justify-center">
+                <Icon name="bxl-github" />
+              </span>
             </a>
           </div>
         </div>
         <a
           href="mailto:moses.nwigberi@ditcosoft.com"
-          className="w-full md:max-w-[600px] text-center rounded-full px-4 py-4 bg-[#0053CC] text-white"
+          className="w-full flex items-center justify-center gap-3 md:max-w-[600px] text-center rounded-full px-4 py-4 bg-[#0053CC] text-white"
         >
-          <i className="fas fa-envelope mr-2"></i> HIRE ME
+          <span className="flex items-center justify-center">
+            <Icon name="bx-envelope" />
+          </span>
+          <span>HIRE ME</span>
         </a>
       </div>
       <button
         className="right-[13px] lg:-right-[15px] z-50 text-2xl bg-[#1f1f1f] hover:text-[#0053CC] hover:border-[#0053CC] transition-colors duration-300 mt-12 w-12 h-12 fixed md:fixed lg:relative flex justify-center items-center rounded-full border-[1px] border-[#4E4E4E] p-3 text-white"
         onClick={() => setSideBar(true)}
       >
-        <i className="fa-solid fa-bars"></i>
+        <span className="flex items-center justify-center">
+          <Icon name="bx-menu-alt-right" />
+        </span>
       </button>
       <div
         className={
@@ -107,48 +122,62 @@ const Header = () => {
           href="/"
           className={`flex duration-300 transition-colors justify-center items-center  ${section === "home" ? "text-[#0053cc]" : "text-[#999999]"}`}
         >
-          <i className="fas fa-house"></i>
+          <span className="flex items-center justify-center">
+            <Icon name="bx-home" />
+          </span>
         </Link>
         <div
           className={`flex duration-300 transition-colors justify-center items-center  ${section === "about" ? "text-[#0053cc]" : "text-[#999999]"}`}
         >
           <a href="/#about">
-            <i className="fas fa-user"></i>
+            <span className="flex items-center justify-center">
+              <Icon name="bx-user" />
+            </span>
           </a>
         </div>
         <div
           className={`flex duration-300 transition-colors justify-center items-center  ${section === "experience" ? "text-[#0053cc]" : "text-[#999999]"}`}
         >
           <a href="/#experience">
-            <i className="fas fa-file-alt"></i>
+            <span className="flex items-center justify-center">
+              <Icon name="bx-file" />
+            </span>
           </a>
         </div>
         <div
           className={`flex duration-300 transition-colors justify-center items-center  ${section === "services" ? "text-[#0053cc]" : "text-[#999999]"}`}
         >
           <a href="#services">
-            <i className="fas fa-cogs"></i>
+            <span className="flex items-center justify-center">
+              <Icon name="bx-code-block" />
+            </span>
           </a>
         </div>
         <div
           className={`flex duration-300 transition-colors justify-center items-center  ${section === "skills" ? "text-[#0053cc]" : "text-[#999999]"}`}
         >
           <a href="/#skills">
-            <i className="fas fa-code"></i>
+            <span className="flex items-center justify-center">
+              <Icon name="bx-terminal" />
+            </span>
           </a>
         </div>
         <div
           className={`flex duration-300 transition-colors justify-center items-center  ${section === "portfolio" ? "text-[#0053cc]" : "text-[#999999]"}`}
         >
           <a href="/#portfolio">
-            <i className="fas fa-briefcase"></i>
+            <span className="flex items-center justify-center">
+              <Icon name="bx-briefcase" />
+            </span>
           </a>
         </div>
         <div
           className={`flex duration-300 transition-colors justify-center items-center  ${section === "contact" ? "text-[#0053cc]" : "text-[#999999]"}`}
         >
           <a href="/#contact">
-            <i className="fas fa-envelope"></i>
+            <span className="flex items-center justify-center">
+              <Icon name="bx-envelope" />
+            </span>
           </a>
         </div>
         <button
@@ -169,55 +198,59 @@ const Header = () => {
           <b>MENU</b>
         </span>
         <div className="flex justify-center items-center text-gray-400">
-          <button className="flex items-center gap-5">
-            <span>
-              <i className="fas fa-house w-2 h-2"></i>
+          <button className="flex justify-center w-auto items-center gap-5">
+            <span className="flex items-center justify-center">
+              <Icon name="bx-home" />
             </span>
             <span>Home</span>
           </button>
         </div>
         <div className="flex justify-center items-center text-gray-400">
-          <button className="flex items-center gap-5">
-            <span>
-              <i className="fas fa-user w-2 h-2"></i>
+          <button className="flex justify-center w-auto items-center gap-5">
+            <span className="flex items-center justify-center">
+              <Icon name="bx-user" />
             </span>
             <span>About</span>
           </button>
         </div>
         <div className="flex justify-center items-center text-gray-400">
-          <button className="flex items-center gap-5">
-            <span>
-              <i className="fas fa-file w-2 h-2"></i>
+          <button className="flex justify-center w-auto items-center gap-5">
+            <span className="flex items-center justify-center">
+              <Icon name="bx-file" />
             </span>
             <span>Resume</span>
           </button>
         </div>
         <div className="flex justify-center items-center text-gray-400">
-          <button className="flex items-center gap-5">
-            <span>
-              <i className="fas fa-briefcase w-2 h-2"></i>
+          <button className="flex justify-center w-auto items-center gap-5">
+            <span className="flex items-center justify-center">
+              <Icon name="bx-code-block" />
+            </span>
+            <span>Services</span>
+          </button>
+        </div>
+        <div className="flex justify-center items-center text-gray-400">
+          <button className="flex justify-center w-auto items-center gap-5">
+            <span className="flex items-center justify-center">
+              <Icon name="bx-terminal" />
+            </span>
+            <span>Skills</span>
+          </button>
+        </div>
+        <div className="flex justify-center items-center text-gray-400">
+          <button className="flex justify-center w-auto items-center gap-5">
+            <span className="flex items-center justify-center">
+              <Icon name="bx-briefcase" />
             </span>
             <span>Portfolio</span>
           </button>
         </div>
         <div className="flex justify-center items-center text-gray-400">
-          <button>
-            <i className="fas fa-file-alt w-2 h-2 mr-4"></i>&nbsp; Resume
-          </button>
-        </div>
-        <div className="flex justify-center items-center text-gray-400">
-          <button>
-            <i className="fas fa-briefcase w-2 h-2 mr-4"></i>&nbsp; Portfolio
-          </button>
-        </div>
-        <div className="flex justify-center items-center text-gray-400">
-          <button>
-            <i className="fas fa-cogs w-2 h-2 mr-4"></i>&nbsp; Services
-          </button>
-        </div>
-        <div className="flex justify-center items-center text-gray-400">
-          <button>
-            <i className="fas fa-envelope w-2 h-2 mr-4"></i>&nbsp; Contact
+          <button className="flex justify-center w-auto items-center gap-5">
+            <span className="flex items-center justify-center">
+              <Icon name="bx-envelope" />
+            </span>
+            <span>Contact</span>
           </button>
         </div>
       </div>

@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Loader from "@/components/Loader";
 import { SectionProvider } from "@/Helpers/context";
+import Icon from "@/components/Icons";
 
 const Template = ({ children }: { children: ReactNode }) => {
   const { pathname } = useScrollTop();
@@ -23,13 +24,12 @@ const Template = ({ children }: { children: ReactNode }) => {
         anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
       >
         <SectionProvider>
-
           <Toaster
             toastOptions={{
               style: {
-                zIndex: '99999999',
-                background: 'white'
-              }
+                zIndex: "99999999",
+                background: "white",
+              },
             }}
           />
           <Loader />
@@ -47,7 +47,9 @@ const Template = ({ children }: { children: ReactNode }) => {
               rel="noopener noreferrer"
               href="https://wa.me/+2348075489362"
             >
-              <i className="fa-brands fa-whatsapp"></i>
+              <span className="flex items-center justify-center">
+                <Icon name="bxl-whatsapp" />
+              </span>
             </a>
           </div>
         </SectionProvider>
