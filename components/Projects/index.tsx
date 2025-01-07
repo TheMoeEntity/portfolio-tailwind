@@ -7,7 +7,7 @@ import nosrati from "../../public/images/nosrati.png";
 import farzad from "../../public/images/farzad2.png";
 import pepnops from "../../public/images/PEPNOPS1.png";
 import rcp from "../../public/images/rcp.png";
-import greencal from "../../public/images/greencal_new.png";
+import greencal from "../../public/images/greencal-updated.png";
 
 import { useSetIntersections } from "@/Helpers/hooks";
 import Link from "next/link";
