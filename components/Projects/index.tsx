@@ -11,6 +11,7 @@ import greencal from "../../public/images/greencal-updated.png";
 
 import { useSetIntersections } from "@/Helpers/hooks";
 import Link from "next/link";
+import Icon from "../Icons";
 
 const Projects = () => {
   const { introRef } = useSetIntersections("portfolio");
@@ -21,7 +22,9 @@ const Projects = () => {
       className=" px-5 py-10 mt-10 flex flex-col gap-y-10"
     >
       <span className="px-5 items-center text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]">
-        <i className="fas fa-brief-case"></i>
+        <span className="flex items-center justify-center">
+          <Icon name="bx-briefcase" />
+        </span>
         <span>PORTFOLIO</span>
       </span>
       <span>

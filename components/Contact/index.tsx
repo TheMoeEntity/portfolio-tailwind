@@ -5,6 +5,7 @@ import Spinner from "../Spinner";
 import toast from "react-hot-toast";
 import { Helpers } from "@/Helpers";
 import { useSetIntersections } from "@/Helpers/hooks";
+import Icon from "../Icons";
 
 const Contact = () => {
   const { introRef } = useSetIntersections("contact");
@@ -72,7 +73,9 @@ const Contact = () => {
     >
       {loading && <Spinner />}
       <span className="px-5 items-center text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]">
-        <i className="fas fa-envelope"></i>
+        <span className="flex items-center justify-center">
+          <Icon name="bx-envelope" />
+        </span>
         <span>CONTACT</span>
       </span>
       <span>

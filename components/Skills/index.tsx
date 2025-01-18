@@ -13,7 +13,9 @@ const Skills = () => {
       className=" px-5 py-10 mt-10 flex flex-col gap-y-10"
     >
       <span className="px-5 text-sm w-fit flex gap-4 py-2 border-[1px] rounded-full text-white border-[#9999]">
-        <i className="fas fa-tools"></i>
+        <span className="flex items-center justify-center">
+          <Icon name="bx-terminal" />
+        </span>
         <span>MY SKILLS</span>
       </span>
       <span>
