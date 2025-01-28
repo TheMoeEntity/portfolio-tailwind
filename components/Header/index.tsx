@@ -17,7 +17,7 @@ const Header = () => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center left",
-    backgroundImage: `url('/images/moses_.jpg')`,
+    backgroundImage: `url('/images/moses-new.jpeg')`,
   };
   const [sidebar, setSideBar] = useState<boolean>(false);
   const [prevScrollPos, setPrevScrollPos] = useState<number>(0);

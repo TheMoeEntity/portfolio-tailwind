@@ -13,7 +13,7 @@ const Intro = () => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center left",
-    backgroundImage: `url('/images/moses_.jpg')`,
+    backgroundImage: `url('/images/moses-new.jpeg')`,
   };
   const { elementsRef } = useScrollReveal(false);
   const { introRef } = useSetIntersections("home");
