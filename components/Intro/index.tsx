@@ -12,8 +12,9 @@ const Intro = () => {
   const imageStyles: CSSProperties = {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center left",
-    backgroundImage: `url('/images/moses-new.jpeg')`,
+    backgroundPosition: "top left",
+    filter: "grayscale(100%)",
+    backgroundImage: `url('/images/moe-recent.jpeg')`,
   };
   const { elementsRef } = useScrollReveal(false);
   const { introRef } = useSetIntersections("home");
