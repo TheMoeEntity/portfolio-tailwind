@@ -102,14 +102,6 @@ const Header = () => {
           <span>HIRE ME</span>
         </a>
       </div>
-      <button
-        className="right-[13px] lg:-right-[15px] z-50 text-2xl bg-[#1f1f1f] hover:text-[#0053CC] hover:border-[#0053CC] transition-colors duration-300 mt-12 w-12 h-12 fixed md:fixed lg:relative flex justify-center items-center rounded-full border-[1px] border-[#4E4E4E] p-3 text-white"
-        onClick={() => setSideBar(true)}
-      >
-        <span className="flex items-center justify-center">
-          <Icon name="bx-menu-alt-right" />
-        </span>
-      </button>
       <div
         className={
           "fixed shadow-xl bg-[#1F1F1F] z-[50] top-1/2 gap-y-5 px-4 py-5 right-3 md:right-16 rounded-full border-[#575757] border-[1px] flex flex-col items-center justify-center duration-500 transition-all " +

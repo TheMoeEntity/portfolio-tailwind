@@ -79,12 +79,15 @@ const Intro = () => {
         </div>
         <div className="w-full px-3">
           {" "}
-          <button
-            onClick={() => alert("clicked me")}
-            className="w-full rounded-full px-4 py-3 bg-[#0053CC] text-white"
+          <a
+            href="mailto:moses.nwigberi@ditcosoft.com"
+            className="w-full flex items-center justify-center gap-3 md:max-w-[600px] text-center rounded-full px-4 py-4 bg-[#0053CC] text-white"
           >
-            <i className="fas fa-envelope mr-2"></i> HIRE ME!
-          </button>
+            <span className="flex items-center justify-center">
+              <Icon name="bx-envelope" />
+            </span>
+            <span>HIRE ME</span>
+          </a>
         </div>
       </div>
       <span className="px-5 items-center text-sm w-fit flex gap-2 py-2 border-[1px] rounded-full text-white border-[#9999]">

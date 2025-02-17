@@ -148,7 +148,7 @@ const Experience = () => {
         <span className="flex items-center justify-center">
           <Icon name="bx-download" size="17px" />
         </span>
-        <a href="/files/Resume-may2024.pdf" target="_blank">
+        <a href="/files/Moe-resume.pdf" target="_blank">
           View Resume
         </a>
       </button>
