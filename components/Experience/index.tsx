@@ -108,7 +108,7 @@ const Experience = () => {
             className="translateUp"
           >
             <div className="text-xl transition-colors duration-700 group-hover:text-[#0053cc]">
-              2023-present
+              August 2023 - July 2024
             </div>
             <div className="flex flex-col gap-y-4 mt-5">
               <h2 className="font-semiboold text-2xl md:text-3xl text-white">
@@ -133,7 +133,7 @@ const Experience = () => {
             className="translateUp"
           >
             <div className="text-xl transition-colors duration-700 group-hover:text-[#0053cc]">
-              2024-present
+              May 2024 - present
             </div>
             <div className="flex flex-col gap-y-4 mt-5">
               <h2 className="font-semiboold text-2xl md:text-3xl text-white">
